@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Info } from 'lucide-react';
+---
+
+<Layout title="About - Disk Monitor">
+  <div class="p-8">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">About Disk Monitor</h1>
+      <p class="text-gray-600 dark:text-gray-400">Learn more about this application</p>
+    </div>
+
+    <div class="max-w-3xl">
+      <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg">
+            <Info className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+          </div>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-gray-100">
+            Disk Monitoring Dashboard
+          </h2>
+        </div>
+
+        <div class="space-y-4 text-gray-700 dark:text-gray-300">
+          <p>
+            This is a modern disk monitoring dashboard built with Astro, React, TypeScript, and Tailwind CSS.
+            It demonstrates how to create a performant web application using Astro's partial hydration strategy.
+          </p>
+
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mt-6">Key Features</h3>
+          <ul class="list-disc list-inside space-y-2">
+            <li>Real-time disk monitoring with mock data</li>
+            <li>Device health and status tracking</li>
+            <li>File system analytics</li>
+            <li>Dark/Light theme support</li>
+            <li>Responsive design for all devices</li>
+          </ul>
+
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mt-6">Technology Stack</h3>
+          <ul class="list-disc list-inside space-y-2">
+            <li><strong>Astro</strong> - Static site generator with partial hydration</li>
+            <li><strong>React</strong> - Interactive UI components</li>
+            <li><strong>TypeScript</strong> - Type-safe development</li>
+            <li><strong>Tailwind CSS v4</strong> - Utility-first styling</li>
+            <li><strong>Lucide Icons</strong> - Beautiful, consistent icons</li>
+          </ul>
+
+          <div class="mt-6 p-4 bg-blue-50 dark:bg-blue-950 rounded-lg border border-blue-200 dark:border-blue-800">
+            <p class="text-sm text-blue-900 dark:text-blue-100">
+              <strong>Note:</strong> This is an example static page created with Astro. 
+              It requires no JavaScript to render, making it incredibly fast!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

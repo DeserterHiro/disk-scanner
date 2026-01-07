@@ -1,23 +1,33 @@
 ---
-import Sider from '../components/Sider.astro';
-import "../styles/global.css"
+import { Sidebar } from '../components/Sidebar';
+import { AppLayout } from '../components/AppLayout';
+import '../styles/index.css';
 
 interface Props {
-    title: string;
+  title: string;
 }
 
-const {title} = Astro.props;
+const { title } = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{title}</title>
-    </head>
-    <body class="grid grid-cols-7 grid-rows-4 min-h-screen w-screen">
-        <Sider></Sider>
-        <slot/>
-
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <script is:inline>
+      // Set theme before page renders to avoid flash
+      const theme = localStorage.getItem('theme') || 
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    </script>
+  </head>
+  <body>
+    <AppLayout client:load>
+          <slot />
+    </AppLayout>
+  </body>
 </html>

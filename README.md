@@ -1,1 +1,1 @@
-# disk-scanner
+# disk-scanner-viewer
